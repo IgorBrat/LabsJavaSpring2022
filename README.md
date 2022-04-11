@@ -1,3 +1,8 @@
+# LabsJavaSpring2022
+
+New repo (without lab 1)
+
+
 # lab 2
 
 Task: Реалізувати ієрархію товарів, присутнріх у дитячому магазині.
