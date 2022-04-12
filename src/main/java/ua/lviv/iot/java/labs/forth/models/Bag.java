@@ -1,5 +1,12 @@
-package ua.iot.java.labs.second.models;
+package ua.lviv.iot.java.labs.forth.models;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
 public class Bag extends Good{
 	private String pattern;
 	private int capacityInLitres;
@@ -13,29 +20,5 @@ public class Bag extends Good{
 		this.weightInKg = weightInKg;
 		this.brand = brand;
 		this.typeName = "Bag";
-	}
-	public String getPattern() {
-		return pattern;
-	}
-	public void setPattern(String pattern) {
-		this.pattern = pattern;
-	}
-	public int getCapacityInLitres() {
-		return capacityInLitres;
-	}
-	public void setCapacityInLitres(int capacityInLitres) {
-		this.capacityInLitres = capacityInLitres;
-	}
-	public float getWeightInKg() {
-		return weightInKg;
-	}
-	public void setWeightInKg(float weightInKg) {
-		this.weightInKg = weightInKg;
-	}
-	public String getBrand() {
-		return brand;
-	}
-	public void setBrand(String brand) {
-		this.brand = brand;
 	}
 }

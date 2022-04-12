@@ -1,5 +1,14 @@
-package ua.iot.java.labs.second.models;
+package ua.lviv.iot.java.labs.forth.models;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+@Getter
+@Setter
+@EqualsAndHashCode
+@NoArgsConstructor
 public abstract class Good {
 	protected String name;
 	protected float priceInUAH;
@@ -15,48 +24,6 @@ public abstract class Good {
 		this.isDiscounted = isDiscounted;
 		this.id = id;
 		this.origin = origin;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public float getPriceInUAH() {
-		return priceInUAH;
-	}
-	public void setPriceInUAH(float priceInUAH) {
-		this.priceInUAH = priceInUAH;
-	}
-	public Gender getForGender() {
-		return forGender;
-	}
-	public void setForGender(Gender forGender) {
-		this.forGender = forGender;
-	}
-	public boolean isDiscounted() {
-		return isDiscounted;
-	}
-	public void setIsDiscounted(boolean discount) {
-		this.isDiscounted = discount;
-	}
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
-	public String getOrigin() {
-		return origin;
-	}
-	public void setOrigin(String origin) {
-		this.origin = origin;
-	}
-	public String getTypeName() {
-		return typeName;
-	}
-	protected void setTypeName(String typeName) {
-		this.typeName = typeName;
 	}
 	
 	@Override

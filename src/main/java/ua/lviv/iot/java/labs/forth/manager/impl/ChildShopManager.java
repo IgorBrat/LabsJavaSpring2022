@@ -1,6 +1,7 @@
-package ua.iot.java.labs.second.manager.impl;
+package ua.lviv.iot.java.labs.forth.manager.impl;
 
 import java.util.Arrays;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -9,8 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import ua.iot.java.labs.second.manager.IChildShopManager;
-import ua.iot.java.labs.second.models.*;
+import ua.lviv.iot.java.labs.forth.manager.IChildShopManager;
+import ua.lviv.iot.java.labs.forth.models.*;
 
 public class ChildShopManager implements IChildShopManager{
 	private Map<String, List<Good>> goodsMap = new HashMap<>();

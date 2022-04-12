@@ -1,10 +1,10 @@
-package ua.iot.java.labs.second;
+package ua.lviv.iot.java.labs.forth;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import ua.iot.java.labs.second.models.*;
-import ua.iot.java.labs.second.manager.impl.*;
+import ua.lviv.iot.java.labs.forth.models.*;
+import ua.lviv.iot.java.labs.forth.manager.impl.*;
 
 public class Main {
 
@@ -52,14 +52,19 @@ public class Main {
 		
 		System.out.println("availableGoods");
 		System.out.println(availableGoods);
-		manager.getGoodsSortedByPrice(availableGoods, true);
-		System.out.println("sorted by price availableGoods");
+		
+		// Method gets list of goods and boolean variable isReversed (to make sorting in both ascending and descending)
+		manager.getGoodsSortedByPrice(availableGoods, false);
+		System.out.println("sorted by price availableGoods(ascending)");
 		System.out.println(availableGoods);
+		
 		List<Clothes> clothesChoosenBySeasonAndGender = manager.findClothesBySeasonAndGender(Season.AUTUMN, Gender.FEMALE);
+		
 		System.out.println("autumn clothes for girls");
 		System.out.println(clothesChoosenBySeasonAndGender);
+		
 		manager.getClothesSortedBySize(clothesChoosenBySeasonAndGender, true);
-		System.out.println("sorted by size clothes");
+		System.out.println("sorted by size clothes(descending)");
 		System.out.println(clothesChoosenBySeasonAndGender);
 	}
 }

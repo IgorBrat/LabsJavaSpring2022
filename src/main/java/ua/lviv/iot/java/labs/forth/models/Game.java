@@ -1,5 +1,12 @@
-package ua.iot.java.labs.second.models;
+package ua.lviv.iot.java.labs.forth.models;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
 public class Game extends Good{
 	private int sinceAge;
 	private int minCountOfPlayers;
@@ -15,35 +22,5 @@ public class Game extends Good{
 		this.aboutGame = aboutGame;
 		this.publisher = publisher;
 		this.typeName = "Game";
-	}
-	public int getSinceAge() {
-		return sinceAge;
-	}
-	public void setSinceAge(int sinceAge) {
-		this.sinceAge = sinceAge;
-	}
-	public int getMinCountOfPlayers() {
-		return minCountOfPlayers;
-	}
-	public void setMinCountOfPlayers(int minCountOfPlayers) {
-		this.minCountOfPlayers = minCountOfPlayers;
-	}
-	public int getMaxCountOfPlayers() {
-		return maxCountOfPlayers;
-	}
-	public void setMaxCountOfPlayers(int maxCountOfPlayers) {
-		this.maxCountOfPlayers = maxCountOfPlayers;
-	}
-	public String getAboutGame() {
-		return aboutGame;
-	}
-	public void setAboutGame(String aboutGame) {
-		this.aboutGame = aboutGame;
-	}
-	public String getPublisher() {
-		return publisher;
-	}
-	public void setPublisher(String publisher) {
-		this.publisher = publisher;
 	}
 }
