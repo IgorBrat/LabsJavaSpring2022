@@ -9,6 +9,9 @@ import ua.iot.java.labs.second.manager.impl.*;
 public class Main {
 
 	public static void main(String[] args) {
+		ChildShopManager manager = new ChildShopManager();
+		List<Good> availableGoods = new LinkedList<Good>();
+		
 		Good clothes1 = new Clothes("Red leather jacket for boy", 600, Gender.FEMALE,
 				true, 17645219, "Turkey", ClothesType.JACKET, ClothesSize.L, "leather",
 				Season.AUTUMN, "still bloody red");
@@ -34,5 +37,28 @@ public class Main {
 		Good truthOrAction = new Game("\"Truth or action\" game", 1000, Gender.INTERSEX,
 				true, 23029335, "Belgium", 8, 3, 10, 
 				"Take turns in doing actions or telling the truth about something", "FreeTableGames");
+		availableGoods.add(clothes1);
+		availableGoods.add(clothes2);
+		availableGoods.add(clothes3);
+		availableGoods.add(clothes4);
+		availableGoods.add(clothes5);
+		availableGoods.add(giraffeFluffy);
+		availableGoods.add(spiderManBag);
+		availableGoods.add(truthOrAction);
+		availableGoods.add(clothes6);
+		
+		manager.addGoods(availableGoods);
+		
+		System.out.println("availableGoods");
+		System.out.println(availableGoods);
+		manager.getGoodsSortedByPrice(availableGoods, true);
+		System.out.println("sorted by price availableGoods");
+		System.out.println(availableGoods);
+		List<Clothes> clothesChoosenBySeasonAndGender = manager.findClothesBySeasonAndGender(Season.AUTUMN, Gender.FEMALE);
+		System.out.println("autumn clothes for girls");
+		System.out.println(clothesChoosenBySeasonAndGender);
+		manager.getClothesSortedBySize(clothesChoosenBySeasonAndGender, true);
+		System.out.println("sorted by size clothes");
+		System.out.println(clothesChoosenBySeasonAndGender);
 	}
 }
