@@ -28,6 +28,6 @@ public abstract class Good {
 	
 	@Override
 	public String toString() {
-		return "Object: " + this.name + ", for " + this.priceInUAH + "UAH, gender: " + this.forGender + ", origin: " + this.origin + "." + System.lineSeparator();
+		return "Object: " + this.name + ", for " + this.priceInUAH + "UAH, gender: " + this.forGender + "." + System.lineSeparator();
 	}
 }

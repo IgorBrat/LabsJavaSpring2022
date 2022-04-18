@@ -31,7 +31,6 @@ public class Main {
 				"Spider Man print", 12, 4, "Kite");
 		Good truthOrAction = new Game("\"Truth or action\" game", 1000, Gender.INTERSEX, true, 23029335, "Belgium", 8,
 				3, 10, "Take turns in doing actions or telling the truth about something", "FreeTableGames");
-
 		availableGoods.add(clothes1);
 		availableGoods.add(clothes2);
 		availableGoods.add(clothes3);
