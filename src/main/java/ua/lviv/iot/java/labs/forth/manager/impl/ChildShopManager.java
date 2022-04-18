@@ -58,7 +58,6 @@ public class ChildShopManager implements IChildShopManager{
 		else {
 			goods.sort(Comparator.comparing(Good::getPriceInUAH));
 		}
-		
 	}
 
 	@Override
