@@ -16,11 +16,11 @@ public class Game extends Good{
 	public Game(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id, String origin,
 			int sinceAge, int minCountOfPlayers, int maxCountOfPlayers, String aboutGame, String publisher) {
 		super(name, priceInUAH, forGender, isDiscounted, id, origin);
-		this.sinceAge = sinceAge;
-		this.minCountOfPlayers = minCountOfPlayers;
-		this.maxCountOfPlayers = maxCountOfPlayers;
-		this.aboutGame = aboutGame;
-		this.publisher = publisher;
-		this.typeName = "Game";
+		this.setSinceAge(sinceAge);
+		this.setMinCountOfPlayers(minCountOfPlayers);
+		this.setMaxCountOfPlayers(maxCountOfPlayers);
+		this.setAboutGame(aboutGame);
+		this.setPublisher(publisher);
+		this.setTypeName("Game");
 	}
 }

@@ -14,9 +14,9 @@ public class Toy extends Good{
 	public Toy(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id, String origin,
 			float weight, String material, String creature) {
 		super(name, priceInUAH, forGender, isDiscounted, id, origin);
-		this.weightInKg = weight;
-		this.material = material;
-		this.creature = creature;
-		this.typeName = "Toy";
+		this.setWeightInKg(weight);
+		this.setMaterial(material);
+		this.setCreature(creature);
+		this.setTypeName("Toy");
 	}
 }

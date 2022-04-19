@@ -18,12 +18,12 @@ public abstract class Good {
 	protected String origin;
 	protected String typeName;
 	protected Good(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id, String origin) {
-		this.name = name;
-		this.priceInUAH = priceInUAH;
-		this.forGender = forGender;
-		this.isDiscounted = isDiscounted;
-		this.id = id;
-		this.origin = origin;
+		this.setName(name);
+		this.setPriceInUAH(priceInUAH);
+		this.setForGender(forGender);
+		this.setDiscounted(isDiscounted);
+		this.setId(id);
+		this.setOrigin(origin);
 	}
 	
 	@Override

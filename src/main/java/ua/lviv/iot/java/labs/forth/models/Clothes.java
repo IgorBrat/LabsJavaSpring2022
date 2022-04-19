@@ -16,12 +16,12 @@ public class Clothes extends Good{
 	public Clothes(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id, String origin,
 			ClothesType type, ClothesSize size, String material, Season season, String pattern) {
 		super(name, priceInUAH, forGender, isDiscounted, id, origin);
-		this.type = type;
-		this.size = size;
-		this.material = material;
-		this.season = season;
-		this.pattern = pattern;
-		this.typeName = "Clothes";
+		this.setType(type);
+		this.setSize(size);
+		this.setMaterial(material);
+		this.setSeason(season);
+		this.setPattern(pattern);
+		this.setTypeName("Clothes");
 	}
 	
 	@Override

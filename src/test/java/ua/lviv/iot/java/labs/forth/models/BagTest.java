@@ -2,9 +2,6 @@ package ua.lviv.iot.java.labs.forth.models;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import ua.lviv.iot.java.labs.forth.models.Good;
-import ua.lviv.iot.java.labs.forth.models.Bag;
-
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -15,7 +12,7 @@ import org.junit.jupiter.api.Test;
 class BagTest {
 
 	private Bag bag;
-	
+
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
@@ -26,8 +23,8 @@ class BagTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		bag = new Bag("Spider Man schoolbag", 800, Gender.MALE, false, 18029335, "Canada",
-				"Spider Man print", 12, 4, "Kite");
+		bag = new Bag("Spider Man schoolbag", 800, Gender.MALE, false, 18029335, "Canada", "Spider Man print", 12, 4,
+				"Kite");
 	}
 
 	@AfterEach
@@ -35,14 +32,18 @@ class BagTest {
 	}
 
 	@Test
-	void testBagGetters() {
+	void testBagAllArgsConstructor() {
 		Assertions.assertEquals("Spider Man schoolbag", bag.getName());
 		Assertions.assertEquals(800, bag.getPriceInUAH());
 		Assertions.assertEquals(Gender.MALE, bag.getForGender());
+		Assertions.assertEquals(false, bag.isDiscounted());
 		Assertions.assertEquals(18029335, bag.getId());
 		Assertions.assertEquals("Canada", bag.getOrigin());
-		Assertions.assertEquals("Bag", bag.getTypeName());
+		Assertions.assertEquals("Spider Man print", bag.getPattern());
+		Assertions.assertEquals(12, bag.getCapacityInLitres());
+		Assertions.assertEquals(4, bag.getWeightInKg());
 		Assertions.assertEquals("Kite", bag.getBrand());
+		Assertions.assertEquals("Bag", bag.getTypeName());
 	}
 
 }

@@ -21,7 +21,7 @@ class ChildShopManagerTest {
 	private ChildShopManager shopManager;
 	private List<Clothes> clothes;
 	private List<Good> goods;
-	
+
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
@@ -36,8 +36,8 @@ class ChildShopManagerTest {
 		goods = new LinkedList<Good>();
 		clothes.add(new Clothes("Red leather jacket for boy", 600, Gender.FEMALE, true, 17645219, "Turkey",
 				ClothesType.JACKET, ClothesSize.L, "leather", Season.AUTUMN, "still bloody red"));
-		clothes.add(new Clothes("Blue jeans for girl", 750, Gender.FEMALE, false, 17645220, "Turkey",
-				ClothesType.JEANS, ClothesSize.M, "denim", Season.SUMMER, "light blue"));
+		clothes.add(new Clothes("Blue jeans for girl", 750, Gender.FEMALE, false, 17645220, "Turkey", ClothesType.JEANS,
+				ClothesSize.M, "denim", Season.SUMMER, "light blue"));
 		shopManager = new ChildShopManager();
 		goods.addAll(clothes);
 		shopManager.addGoods(goods);
@@ -53,7 +53,7 @@ class ChildShopManagerTest {
 		Assertions.assertEquals(600, result.get(0).getPriceInUAH());
 		Assertions.assertEquals(750, result.get(1).getPriceInUAH());
 	}
-	
+
 	@Test
 	void nullResultTest() {
 		var result = shopManager.findClothesBySeasonAndGender(Season.WINTER, Gender.MALE);
