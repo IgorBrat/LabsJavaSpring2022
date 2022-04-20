@@ -27,7 +27,7 @@ class GameTest {
 		game = new Game("\"Truth or action\" game", 1000, Gender.INTERSEX, true, 23029335, "Belgium", 8,
 				3, 10, "Take turns in doing actions or telling the truth about something", "FreeTableGames");
 	}
-
+	
 	@AfterEach
 	void tearDown() throws Exception {
 	}

@@ -30,7 +30,7 @@ class ClothesTest {
 	@AfterEach
 	void tearDown() throws Exception {
 	}
-
+	
 	@Test
 	void testClothesConstructor() {
 		Assertions.assertEquals("Red leather jacket for boy", item.getName());
