@@ -17,6 +17,7 @@ public abstract class Good {
 	protected long id;
 	protected String origin;
 	protected String typeName;
+
 	protected Good(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id, String origin) {
 		this.setName(name);
 		this.setPriceInUAH(priceInUAH);
@@ -25,9 +26,18 @@ public abstract class Good {
 		this.setId(id);
 		this.setOrigin(origin);
 	}
-	
+
+	public String getHeaders() {
+		return "Name,PriceInUAH,ForGender,IsDiscounted,ID,Origin";
+	}
+
+	public String toCSV() {
+		return name + "," + priceInUAH + "," + forGender + "," + isDiscounted + "," + id + "," + origin;
+	}
+
 	@Override
 	public String toString() {
-		return "Object: " + this.name + ", for " + this.priceInUAH + "UAH, gender: " + this.forGender + "." + System.lineSeparator();
+		return "Object: " + this.name + ", for " + this.priceInUAH + "UAH, gender: " + this.forGender + "."
+				+ System.lineSeparator();
 	}
 }

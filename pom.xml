@@ -11,6 +11,11 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>4.1</version>
+		</dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.22</version>
@@ -67,9 +72,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.1</version>
 				<configuration>
-                    <testSourceDirectory>${basedir}/src/main/java/</testSourceDirectory>
-                    <testClassesDirectory>${project.build.directory}/test-classes/</testClassesDirectory>
-                </configuration>
+					<testSourceDirectory>${basedir}/src/main/java/</testSourceDirectory>
+					<testClassesDirectory>${project.build.directory}/test-classes/</testClassesDirectory>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

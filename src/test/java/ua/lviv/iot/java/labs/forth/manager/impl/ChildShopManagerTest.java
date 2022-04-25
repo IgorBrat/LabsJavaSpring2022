@@ -2,10 +2,8 @@ package ua.lviv.iot.java.labs.forth.manager.impl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.LinkedList;
-import java.util.Map;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -15,7 +13,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import ua.lviv.iot.java.labs.forth.models.*;
-import ua.lviv.iot.java.labs.forth.manager.impl.*;
 
 class ChildShopManagerTest {
 	private ChildShopManager shopManager;

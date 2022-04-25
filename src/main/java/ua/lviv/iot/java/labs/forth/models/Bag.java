@@ -7,11 +7,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Bag extends Good{
+public class Bag extends Good {
 	private String pattern;
 	private int capacityInLitres;
 	private float weightInKg;
 	private String brand;
+
 	public Bag(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id, String origin,
 			String pattern, int capacityInLitres, float weightInKg, String brand) {
 		super(name, priceInUAH, forGender, isDiscounted, id, origin);
@@ -20,5 +21,15 @@ public class Bag extends Good{
 		this.setWeightInKg(weightInKg);
 		this.setBrand(brand);
 		this.setTypeName("Bag");
+	}
+
+	@Override
+	public String getHeaders() {
+		return super.getHeaders() + ",Pattern,CapacityInLitres,WeightInKg,Brand";
+	}
+
+	@Override
+	public String toCSV() {
+		return super.toCSV() + "," + pattern + "," + capacityInLitres + "," + weightInKg + "," + brand;
 	}
 }
