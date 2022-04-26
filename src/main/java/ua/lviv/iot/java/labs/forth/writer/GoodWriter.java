@@ -8,8 +8,8 @@ import java.util.List;
 import ua.lviv.iot.java.labs.forth.models.Good;
 
 public class GoodWriter {
-	public static void writeCSV(List<Good> goods) throws IOException {
-		try (FileWriter writer = new FileWriter("result.csv"); FileReader reader = new FileReader("result.csv")) {
+	public static void writeCSV(List<Good> goods, String fileName) throws IOException {
+		try (FileWriter writer = new FileWriter(fileName)) {
 			String previousClassName = "";
 			for (Good good : goods) {
 				if (!good.getTypeName().equals(previousClassName)) {
