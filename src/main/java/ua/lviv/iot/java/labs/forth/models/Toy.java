@@ -1,5 +1,12 @@
-package ua.iot.java.labs.second.models;
+package ua.lviv.iot.java.labs.forth.models;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
 public class Toy extends Good{
 	private float weightInKg;
 	private String material;
@@ -11,23 +18,5 @@ public class Toy extends Good{
 		this.material = material;
 		this.creature = creature;
 		this.typeName = "Toy";
-	}
-	public float getWeightInKg() {
-		return weightInKg;
-	}
-	public void setWeightInKg(float weight) {
-		this.weightInKg = weight;
-	}
-	public String getMaterial() {
-		return material;
-	}
-	public void setMaterial(String material) {
-		this.material = material;
-	}
-	public String getCreature() {
-		return creature;
-	}
-	public void setCreature(String creature) {
-		this.creature = creature;
 	}
 }

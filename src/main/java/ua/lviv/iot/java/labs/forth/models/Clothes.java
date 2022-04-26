@@ -1,5 +1,12 @@
-package ua.iot.java.labs.second.models;
+package ua.lviv.iot.java.labs.forth.models;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
 public class Clothes extends Good{
 	private ClothesType type;
 	private ClothesSize size;
@@ -15,36 +22,6 @@ public class Clothes extends Good{
 		this.season = season;
 		this.pattern = pattern;
 		this.typeName = "Clothes";
-	}
-	public ClothesType getType() {
-		return type;
-	}
-	public void setType(ClothesType type) {
-		this.type = type;
-	}
-	public ClothesSize getSize() {
-		return size;
-	}
-	public void setSize(ClothesSize size) {
-		this.size = size;
-	}
-	public String getMaterial() {
-		return material;
-	}
-	public void setMaterial(String material) {
-		this.material = material;
-	}
-	public Season getSeason() {
-		return season;
-	}
-	public void setSeason(Season season) {
-		this.season = season;
-	}
-	public String getPattern() {
-		return pattern;
-	}
-	public void setPattern(String pattern) {
-		this.pattern = pattern;
 	}
 	
 	@Override

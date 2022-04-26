@@ -1,7 +1,8 @@
-package ua.iot.java.labs.second.manager;
+package ua.lviv.iot.java.labs.forth.manager;
 
 import java.util.List;
-import ua.iot.java.labs.second.models.*;
+
+import ua.lviv.iot.java.labs.forth.models.*;
 
 public interface IChildShopManager {
 	List<Clothes> findClothesBySeasonAndGender(Season season, Gender forGender);
