@@ -13,6 +13,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException{
 		List<Good> goods = new LinkedList<Good>();
+		ChildShopManager shopManager = new ChildShopManager();
 		goods.add(new Clothes("Red leather jacket for boy", 600, Gender.FEMALE, true, 17645219, "Turkey",
 				ClothesType.JACKET, ClothesSize.L, "leather", Season.AUTUMN, "still bloody red"));
 		goods.add(new Clothes("Blue jeans for girl", 750, Gender.FEMALE, false, 17645220, "Turkey", ClothesType.JEANS,
@@ -24,8 +25,9 @@ public class Main {
 		goods.add(new Game("\"Truth or action\" game", 1000, Gender.INTERSEX, true, 23029335, "Belgium", 8, 3, 10,
 				"Take turns in doing actions or telling the truth about something", "FreeTableGames"));
 		goods.add(new Clothes("Green jeans for girl", 750, Gender.FEMALE, false, 17645220, "Turkey", ClothesType.JEANS,
-				ClothesSize.M, "denim", Season.SUMMER, "light blue"));
-		GoodWriter writer = new GoodWriter();
-		writer.writeCSV(goods);
+				ClothesSize.M, "denim", Season.SUMMER, "light green"));
+		shopManager.getGoodsSortedByClassName(goods);
+		GoodWriter.writeCSV(goods);
+		System.out.println("Completed");
 	}
 }

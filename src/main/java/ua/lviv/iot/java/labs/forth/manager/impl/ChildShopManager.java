@@ -61,6 +61,13 @@ public class ChildShopManager implements IChildShopManager {
 			goods.sort(Comparator.comparing(Good::getPriceInUAH));
 		}
 	}
+	
+	@Override
+	public void getGoodsSortedByClassName(List<Good> goods) {
+		var desiredOrder = Arrays.asList("Bag", "Clothes", "Game", "Toy");
+		Comparator<String> goodsOrder = Comparator.comparingInt(desiredOrder::indexOf);
+		goods.sort(Comparator.comparing(Good::getTypeName, goodsOrder));
+	}
 
 	@Override
 	public void getClothesSortedBySize(List<Clothes> clothes, boolean isReversed) {

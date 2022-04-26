@@ -11,17 +11,14 @@ public class GoodWriter {
 	public static void writeCSV(List<Good> goods) throws IOException {
 		try (FileWriter writer = new FileWriter("result.csv"); FileReader reader = new FileReader("result.csv")) {
 			String previousClassName = "";
-
 			for (Good good : goods) {
 				if (!good.getTypeName().equals(previousClassName)) {
 					writer.write(good.getHeaders());
 					writer.write("\r\n");
 					previousClassName = good.getTypeName();
 				}
-//				if(true) {
-//					writer.write(good.toCSV());
-//					writer.write("\r\n");
-//				}
+				writer.write(good.toCSV());
+				writer.write("\r\n");
 			}
 		}
 	}

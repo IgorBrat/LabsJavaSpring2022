@@ -60,8 +60,19 @@ class ChildShopManagerTest {
 
 	@AfterEach
 	void tearDown() throws Exception {
+		
 	}
 
+	@Test
+	void testGetGoodsSortedByClassName() {
+		shopManager.getGoodsSortedByClassName(goods);
+		Assertions.assertEquals("Bag", goods.get(0).getTypeName());
+		Assertions.assertEquals("Clothes", goods.get(1).getTypeName());
+		Assertions.assertEquals("Clothes", goods.get(2).getTypeName());
+		Assertions.assertEquals("Game", goods.get(3).getTypeName());
+		Assertions.assertEquals("Toy", goods.get(4).getTypeName());
+	}
+	
 	@Test
 	void testGetGoodsSortedByPriceAsc() {
 		shopManager.getGoodsSortedByPrice(goods, false);
