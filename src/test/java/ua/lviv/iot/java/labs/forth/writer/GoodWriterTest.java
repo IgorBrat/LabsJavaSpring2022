@@ -66,8 +66,8 @@ class GoodWriterTest {
     goodsOfSameSubclass.add(new Clothes("Blue jeans for girl", 750, Gender.FEMALE, false, 17645220,
         "Turkey", ClothesType.JEANS, ClothesSize.M, "denim", Season.SUMMER, "light blue"));
     shopManager.getGoodsSortedByClassName(goods);
-    GoodWriter.writeCSV(goods, "result.csv");
-    GoodWriter.writeCSV(goodsOfSameSubclass, "result-same-subclass.csv");
+    GoodWriter.writeCSV(goods, "expected.csv");
+    GoodWriter.writeCSV(goodsOfSameSubclass, "expected-same-subclass.csv");
     GoodWriter.writeCSV(new LinkedList(), "expected-empty.csv");
   }
 
