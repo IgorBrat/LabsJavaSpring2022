@@ -11,7 +11,6 @@ import ua.lviv.iot.java.labs.forth.models.Good;
 public class GoodWriter {
   public static void writeCSV(List<Good> goods, String fileName) throws IOException {
     try (FileWriter writer = new FileWriter(
-        // new File("E:\\Labs\\java\\LabsJavaSpring2022\\src\\test\\resources", fileName),
         new File(Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources", fileName),
         Charset.defaultCharset())) {
       String previousClassName = "";

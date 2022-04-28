@@ -82,7 +82,7 @@ class ChildShopManagerTest {
     Assertions.assertEquals(800, goods.get(3).getPriceInUAH());
     Assertions.assertEquals(1000, goods.get(4).getPriceInUAH());
   }
-
+  
   @Test
   void testGetGoodsSortedByPriceDesc() {
     shopManager.getGoodsSortedByPrice(goods, true);
