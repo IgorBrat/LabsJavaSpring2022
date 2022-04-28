@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -77,11 +78,11 @@ class GoodWriterTest {
   @Test
   void testWriteGeneralCSV() throws IOException {
     try (
-        FileReader expectedReader = new FileReader(
-            new File("E:\\Labs\\java\\LabsJavaSpring2022\\src\\test\\resources", "expected.csv"));
+        FileReader expectedReader = new FileReader(new File(
+            Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources", "expected.csv"));
         BufferedReader expectedBR = new BufferedReader(expectedReader);
-        FileReader actualReader = new FileReader(
-            new File("E:\\Labs\\java\\LabsJavaSpring2022\\src\\test\\resources", "result.csv"));
+        FileReader actualReader = new FileReader(new File(
+            Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources", "result.csv"));
         BufferedReader actualBR = new BufferedReader(actualReader)) {
       String line = "";
       while ((line = expectedBR.readLine()) != null) {
@@ -93,12 +94,12 @@ class GoodWriterTest {
   @Test
   void testWriteGoodsOfSameSubclassCSV() throws IOException {
     try (
-        FileReader expectedReader =
-            new FileReader(new File("E:\\Labs\\java\\LabsJavaSpring2022\\src\\test\\resources",
+        FileReader expectedReader = new FileReader(
+            new File(Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources",
                 "expected-same-subclass.csv"));
         BufferedReader expectedBR = new BufferedReader(expectedReader);
-        FileReader actualReader =
-            new FileReader(new File("E:\\Labs\\java\\LabsJavaSpring2022\\src\\test\\resources",
+        FileReader actualReader = new FileReader(
+            new File(Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources",
                 "result-same-subclass.csv"));
         BufferedReader actualBR = new BufferedReader(actualReader)) {
       String line = "";
@@ -111,8 +112,8 @@ class GoodWriterTest {
   @Test
   void testWriteEmptyCSV() throws IOException {
     try (
-        FileReader expectedReader =
-            new FileReader(new File("E:\\Labs\\java\\LabsJavaSpring2022\\src\\test\\resources",
+        FileReader expectedReader = new FileReader(
+            new File(Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources",
                 "expected-empty.csv"));
         BufferedReader expectedBR = new BufferedReader(expectedReader)) {
       Assertions.assertNull(expectedBR.readLine());
