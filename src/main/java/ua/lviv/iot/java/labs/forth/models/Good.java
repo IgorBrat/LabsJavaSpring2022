@@ -1,12 +1,10 @@
 package ua.lviv.iot.java.labs.forth.models;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 public abstract class Good {
   protected String name;
   protected float priceInUAH;
@@ -18,12 +16,12 @@ public abstract class Good {
 
   protected Good(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id,
       String origin) {
-    this.setName(name);
-    this.setPriceInUAH(priceInUAH);
-    this.setForGender(forGender);
-    this.setDiscounted(isDiscounted);
-    this.setId(id);
-    this.setOrigin(origin);
+    this.name = name;
+    this.priceInUAH = priceInUAH;
+    this.forGender = forGender;
+    this.isDiscounted = isDiscounted;
+    this.id = id;
+    this.origin = origin;
   }
 
   public String getHeaders() {

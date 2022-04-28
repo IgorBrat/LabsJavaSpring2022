@@ -1,12 +1,10 @@
 package ua.lviv.iot.java.labs.forth.models;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 public class Clothes extends Good {
   private ClothesType type;
   private ClothesSize size;
@@ -18,12 +16,12 @@ public class Clothes extends Good {
       String origin, ClothesType type, ClothesSize size, String material, Season season,
       String pattern) {
     super(name, priceInUAH, forGender, isDiscounted, id, origin);
-    this.setType(type);
-    this.setSize(size);
-    this.setMaterial(material);
-    this.setSeason(season);
-    this.setPattern(pattern);
-    this.setTypeName("Clothes");
+    this.type = type;
+    this.size = size;
+    this.material = material;
+    this.season = season;
+    this.pattern = pattern;
+    this.typeName = "Clothes";
   }
 
   @Override

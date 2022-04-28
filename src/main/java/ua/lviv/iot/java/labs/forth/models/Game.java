@@ -1,12 +1,10 @@
 package ua.lviv.iot.java.labs.forth.models;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 public class Game extends Good {
   private int sinceAge;
   private int minCountOfPlayers;
@@ -18,12 +16,12 @@ public class Game extends Good {
       String origin, int sinceAge, int minCountOfPlayers, int maxCountOfPlayers, String aboutGame,
       String publisher) {
     super(name, priceInUAH, forGender, isDiscounted, id, origin);
-    this.setSinceAge(sinceAge);
-    this.setMinCountOfPlayers(minCountOfPlayers);
-    this.setMaxCountOfPlayers(maxCountOfPlayers);
-    this.setAboutGame(aboutGame);
-    this.setPublisher(publisher);
-    this.setTypeName("Game");
+    this.sinceAge = sinceAge;
+    this.minCountOfPlayers = minCountOfPlayers;
+    this.maxCountOfPlayers = maxCountOfPlayers;
+    this.aboutGame = aboutGame;
+    this.publisher = publisher;
+    this.typeName = "Game";
   }
 
   @Override
