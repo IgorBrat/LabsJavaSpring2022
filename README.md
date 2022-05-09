@@ -1,7 +1,4 @@
-# Lab5 Task
+# Lab7 Task
 
-Add tests on models, their methods, manager (optimal coverage >= 80%)
-
-# Lab6 Task
-
-Add class to write present models to CSV, add tests on that, check project for bugs and style warnings (by checkstyle and spotbugs maven plugins)
+Output all Ethernet-connectors from the text. E.g.: RJ11 4P4C, RJ45 8P8C
+Format of connector: RJ<2 numbers> <number><letter><number><letter>
