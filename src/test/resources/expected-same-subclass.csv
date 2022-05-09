@@ -1,0 +1,4 @@
+Name,PriceInUAH,ForGender,IsDiscounted,ID,Origin,Type,Size,Material,Season,Pattern
+Green jeans for girl,750.0,FEMALE,false,17645220,Turkey,JEANS,M,denim,SUMMER,light green
+Red leather jacket for boy,600.0,FEMALE,true,17645219,Turkey,JACKET,L,leather,AUTUMN,still bloody red
+Blue jeans for girl,750.0,FEMALE,false,17645220,Turkey,JEANS,M,denim,SUMMER,light blue
