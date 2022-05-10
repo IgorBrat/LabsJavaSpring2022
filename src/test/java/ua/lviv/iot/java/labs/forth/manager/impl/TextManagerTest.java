@@ -46,14 +46,35 @@ class TextManagerTest {
   void tearDown() throws Exception {}
 
   @Test
-  void testFindSomeEthernetConnectors() throws IOException {
+  void testFindEthernetConnectorsFromString() throws IOException {
+    ethernetConnectors = textManager.findEthernetConnectorsFromString(
+        "The best connector is RJ11 4P4C, but RJ45 8P8C is also good. RJ1H 4P4J is not cool, and not a connector.");
+    assertEquals("RJ11 4P4C", ethernetConnectors.get(0));
+    assertEquals("RJ45 8P8C", ethernetConnectors.get(1));
+  }
+
+  @Test
+  void testEmptyString() throws IOException {
+    ethernetConnectors = textManager.findEthernetConnectorsFromString("");
+    assertEquals(new ArrayList<String>(), ethernetConnectors);
+  }
+
+  @Test
+  void testFindNoEthernetConnectorsFromString() throws IOException {
+    ethernetConnectors = textManager.findEthernetConnectorsFromString(
+        "RJ11 4P47 - might look like connector, but that`s not correct.");
+    assertEquals(new ArrayList<String>(), ethernetConnectors);
+  }
+
+  @Test
+  void testFindSomeEthernetConnectorsFromTxt() throws IOException {
     ethernetConnectors = textManager.findEthernetConnectorsFromTxt("SomeEthernetConnectors.txt");
     assertEquals("RJ11 4P4C", ethernetConnectors.get(0));
     assertEquals("RJ45 8P8C", ethernetConnectors.get(1));
   }
 
   @Test
-  void testFindNoEthernetConnectors() throws IOException {
+  void testFindNoEthernetConnectorsFromTxt() throws IOException {
     ethernetConnectors = textManager.findEthernetConnectorsFromTxt("NoEthernetConnectors.txt");
     assertEquals(new ArrayList<String>(), ethernetConnectors);
   }

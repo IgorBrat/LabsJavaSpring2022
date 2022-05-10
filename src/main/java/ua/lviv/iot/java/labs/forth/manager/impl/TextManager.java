@@ -11,15 +11,25 @@ import java.util.stream.Collectors;
 import ua.lviv.iot.java.labs.forth.manager.ITextManager;
 
 public class TextManager implements ITextManager {
+  String regexEthernet = "RJ\\d{2} \\d\\p{Upper}\\d\\p{Upper}";
+  Pattern pattern = Pattern.compile(regexEthernet);
 
   @Override
   public List<String> findEthernetConnectorsFromTxt(String filename) throws IOException {
-    String regexEthernet = "RJ\\d{2} \\d\\p{Upper}\\d\\p{Upper}";
-    Pattern pat = Pattern.compile(regexEthernet);
     Scanner sc = new Scanner(
         new File(Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources", filename));
     List<String> ethernetConnectors =
-        sc.findAll(pat).map(MatchResult::group).collect(Collectors.toList());
+        sc.findAll(pattern).map(MatchResult::group).collect(Collectors.toList());
+    sc.close();
+    return ethernetConnectors;
+  }
+
+  @Override
+  public List<String> findEthernetConnectorsFromString(String text) throws IOException {
+    Scanner sc = new Scanner(text);
+    List<String> ethernetConnectors =
+        sc.findAll(pattern).map(MatchResult::group).collect(Collectors.toList());
+    sc.close();
     return ethernetConnectors;
   }
 
