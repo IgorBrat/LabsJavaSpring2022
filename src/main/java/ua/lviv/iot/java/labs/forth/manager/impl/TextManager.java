@@ -2,6 +2,7 @@ package ua.lviv.iot.java.labs.forth.manager.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
@@ -17,7 +18,8 @@ public class TextManager implements ITextManager {
   @Override
   public List<String> findEthernetConnectorsFromTxt(String filename) throws IOException {
     Scanner sc = new Scanner(
-        new File(Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources", filename));
+        new File(Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources", filename),
+        Charset.defaultCharset());
     List<String> ethernetConnectors =
         sc.findAll(pattern).map(MatchResult::group).collect(Collectors.toList());
     sc.close();

@@ -1,7 +1,6 @@
 package ua.lviv.iot.java.labs.forth.writer;
 
 import java.io.File;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
