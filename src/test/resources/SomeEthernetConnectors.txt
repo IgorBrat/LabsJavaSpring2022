@@ -1,0 +1,2 @@
+The best connector is RJ11 4P4C, but RJ45 8P8C is also good. RJ1H 4P4J is not cool, and not a connector.
+That`s all. I`m done. RJ11 4P45 is not a connector (does not match pattern). Bye.

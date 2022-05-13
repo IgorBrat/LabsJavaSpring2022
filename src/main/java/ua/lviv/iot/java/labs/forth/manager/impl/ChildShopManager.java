@@ -9,7 +9,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import ua.lviv.iot.java.labs.forth.manager.IChildShopManager;
-import ua.lviv.iot.java.labs.forth.models.*;
+import ua.lviv.iot.java.labs.forth.models.Clothes;
+import ua.lviv.iot.java.labs.forth.models.ClothesSize;
+import ua.lviv.iot.java.labs.forth.models.Gender;
+import ua.lviv.iot.java.labs.forth.models.Good;
+import ua.lviv.iot.java.labs.forth.models.Season;
 
 public class ChildShopManager implements IChildShopManager {
   private Map<String, List<Good>> goodsMap = new HashMap<>();

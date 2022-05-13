@@ -1,0 +1,10 @@
+Name,PriceInUAH,ForGender,IsDiscounted,ID,Origin,Pattern,CapacityInLitres,WeightInKg,Brand
+Spider Man schoolbag,800.0,MALE,false,18029335,Canada,Spider Man print,12,4.0,Kite
+Name,PriceInUAH,ForGender,IsDiscounted,ID,Origin,Type,Size,Material,Season,Pattern
+Red leather jacket for boy,600.0,FEMALE,true,17645219,Turkey,JACKET,L,leather,AUTUMN,still bloody red
+Blue jeans for girl,750.0,FEMALE,false,17645220,Turkey,JEANS,M,denim,SUMMER,light blue
+Green jeans for girl,750.0,FEMALE,false,17645220,Turkey,JEANS,M,denim,SUMMER,light green
+Name,PriceInUAH,ForGender,IsDiscounted,ID,Origin,SinceAge,MinCountOfPlayers,MaxCountOfPlayers,AboutGame,Publisher
+"Truth or action" game,1000.0,INTERSEX,true,23029335,Belgium,8,3,10,Take turns in doing actions or telling the truth about something,FreeTableGames
+Name,PriceInUAH,ForGender,IsDiscounted,ID,Origin,WeightInKg,Material,Creature
+Pluffy giraffe toy,100.0,INTERSEX,false,18019234,Ukraine,0.5,cotton,giraffe
