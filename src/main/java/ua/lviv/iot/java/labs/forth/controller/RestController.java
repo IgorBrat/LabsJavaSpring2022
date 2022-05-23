@@ -2,18 +2,19 @@ package ua.lviv.iot.java.labs.forth.controller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Response;
-import org.springframework.stereotype.Component;
+import ua.lviv.iot.java.labs.forth.models.Clothes;
+import ua.lviv.iot.java.labs.forth.models.ClothesSize;
+import ua.lviv.iot.java.labs.forth.models.ClothesType;
+import ua.lviv.iot.java.labs.forth.models.Gender;
+import ua.lviv.iot.java.labs.forth.models.Season;
 
 @Path("/")
-@Component
 public class RestController {
 
   @GET
-  @Path("/ping")
-  @Produces
-  public Response ping() {
-    return Response.ok().entity("Service online").build();
+  @Path("clothes")
+  public String testGetGood() {
+    return new Clothes("Red leather jacket for boy", 600, Gender.FEMALE, true, 17645219,
+        "Turkey", ClothesType.JACKET, ClothesSize.L, "leather", Season.AUTUMN, "still bloody red").toString();
   }
 }
