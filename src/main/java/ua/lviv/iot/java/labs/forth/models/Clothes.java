@@ -1,10 +1,12 @@
 package ua.lviv.iot.java.labs.forth.models;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Clothes extends Good {
   private ClothesType type;
   private ClothesSize size;
