@@ -24,14 +24,14 @@ public class RestController {
 
   @GET
   @Path("clothes")
-  @Produces("application/json")
+  @Produces(MediaType.APPLICATION_JSON)
   public Response getAllClothes() {
     return Response.ok(childShopService.findAll()).build();
   }
 
   @GET
   @Path("clothes/{id}")
-  @Produces("application/json")
+  @Produces(MediaType.APPLICATION_JSON)
   public Response getById(@PathParam("id") Integer id) {
     var item = childShopService.findById(id);
     if (item.isEmpty()) {
@@ -47,7 +47,7 @@ public class RestController {
   @Produces(MediaType.TEXT_PLAIN)
   public Response saveItem(Clothes item) {
     childShopService.saveItem(item);
-    return Response.status(Status.OK).entity("Saved object with that id.").build();
+    return Response.status(Status.OK).entity("Saved object in db.").build();
   }
 
   @PUT

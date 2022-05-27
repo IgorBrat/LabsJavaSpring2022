@@ -37,10 +37,10 @@ public class ChildShopService {
     childShopRepo.save(itemToResave);
     return true;
   }
-  
+
   public boolean deleteItem(Integer id) {
     Optional<Clothes> itemDB = childShopRepo.findById(id);
-    if(itemDB.isEmpty()) {
+    if (itemDB.isEmpty()) {
       return false;
     }
     childShopRepo.deleteById(id);
