@@ -1,16 +1,12 @@
 package ua.lviv.iot.java.labs.forth.logic;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Optional;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.lviv.iot.java.labs.forth.database.db.ChildShopRepository;
 import ua.lviv.iot.java.labs.forth.models.Clothes;
-import ua.lviv.iot.java.labs.forth.models.ClothesSize;
-import ua.lviv.iot.java.labs.forth.models.ClothesType;
-import ua.lviv.iot.java.labs.forth.models.Gender;
-import ua.lviv.iot.java.labs.forth.models.Good;
-import ua.lviv.iot.java.labs.forth.models.Season;
+
 
 @Service
 public class ChildShopService {
@@ -18,15 +14,37 @@ public class ChildShopService {
   @Autowired
   private ChildShopRepository childShopRepo;
 
-  public List<Good> findAll() {
-    var result = new LinkedList<Good>();
-    result.add(new Clothes("Red leather jacket for boy", 600, Gender.FEMALE, true, 17645219,
-        "Turkey", ClothesType.JACKET, ClothesSize.L, "leather", Season.AUTUMN, "still bloody red"));
-    return result;
+  public Iterable<Clothes> findAll() {
+    return childShopRepo.findAll();
   }
 
-  public Clothes findById(Integer id) {
-    return childShopRepo.findById(id).get();
+  public Optional<Clothes> findById(Integer id) {
+    return childShopRepo.findById(id);
+  }
+
+  public void saveItem(Clothes item) {
+    childShopRepo.save(item);
+  }
+
+  public boolean resaveItem(Integer id, Clothes item) {
+    Optional<Clothes> itemDB = childShopRepo.findById(id);
+    if (itemDB.isEmpty()) {
+      saveItem(item);
+      return false;
+    }
+    Clothes itemToResave = itemDB.get();
+    BeanUtils.copyProperties(item, itemToResave, "id");
+    childShopRepo.save(itemToResave);
+    return true;
   }
   
+  public boolean deleteItem(Integer id) {
+    Optional<Clothes> itemDB = childShopRepo.findById(id);
+    if(itemDB.isEmpty()) {
+      return false;
+    }
+    childShopRepo.deleteById(id);
+    return true;
+  }
+
 }

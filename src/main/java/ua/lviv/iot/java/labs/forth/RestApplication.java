@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan("ua.lviv.iot")
-public class RestApplication extends SpringBootServletInitializer{
+public class RestApplication extends SpringBootServletInitializer {
 
   public static void main(String[] args) {
 

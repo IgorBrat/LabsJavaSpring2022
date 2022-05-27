@@ -2,6 +2,7 @@ package ua.lviv.iot.java.labs.forth.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -33,6 +34,7 @@ public abstract class Good {
     this.origin = origin;
   }
 
+  @JsonIgnore
   public String getHeaders() {
     return "Name,PriceInUAH,ForGender,IsDiscounted,ID,Origin";
   }
