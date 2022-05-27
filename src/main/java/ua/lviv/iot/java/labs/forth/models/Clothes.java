@@ -14,7 +14,7 @@ public class Clothes extends Good {
   private Season season;
   private String pattern;
 
-  public Clothes(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id,
+  public Clothes(String name, float priceInUAH, Gender forGender, boolean isDiscounted, Integer id,
       String origin, ClothesType type, ClothesSize size, String material, Season season,
       String pattern) {
     super(name, priceInUAH, forGender, isDiscounted, id, origin);

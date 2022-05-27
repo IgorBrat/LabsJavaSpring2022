@@ -11,7 +11,7 @@ public class Bag extends Good {
   private float weightInKg;
   private String brand;
 
-  public Bag(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id,
+  public Bag(String name, float priceInUAH, Gender forGender, boolean isDiscounted, Integer id,
       String origin, String pattern, int capacityInLitres, float weightInKg, String brand) {
     super(name, priceInUAH, forGender, isDiscounted, id, origin);
     this.pattern = pattern;

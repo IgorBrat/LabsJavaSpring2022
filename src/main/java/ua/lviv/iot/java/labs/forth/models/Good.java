@@ -1,5 +1,7 @@
 package ua.lviv.iot.java.labs.forth.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,14 +11,19 @@ import lombok.Setter;
 @NoArgsConstructor
 public abstract class Good {
   protected String name;
+  @Column("priceInUAH")
   protected float priceInUAH;
+  @Column("forGender")
   protected Gender forGender;
+  @Column("isDiscounted")
   protected boolean isDiscounted;
-  protected long id;
+  @Id
+  protected Integer id;
   protected String origin;
+  @Column("typeName")
   protected String typeName;
 
-  protected Good(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id,
+  protected Good(String name, float priceInUAH, Gender forGender, boolean isDiscounted, Integer id,
       String origin) {
     this.name = name;
     this.priceInUAH = priceInUAH;

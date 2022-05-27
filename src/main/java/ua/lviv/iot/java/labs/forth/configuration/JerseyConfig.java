@@ -1,4 +1,4 @@
-package ua.lviv.iot.java.labs.forth.application;
+package ua.lviv.iot.java.labs.forth.configuration;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.stereotype.Component;

@@ -25,7 +25,7 @@ public class ChildShopService {
     return result;
   }
 
-  public Good findById(Integer id) {
+  public Clothes findById(Integer id) {
     return childShopRepo.findById(id).get();
   }
   

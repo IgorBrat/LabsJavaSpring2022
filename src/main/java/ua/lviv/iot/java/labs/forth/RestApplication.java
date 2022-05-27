@@ -1,13 +1,13 @@
-package ua.lviv.iot.java.labs.forth.application;
+package ua.lviv.iot.java.labs.forth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import ua.lviv.iot.java.labs.forth.logic.ChildShopService;
+import org.springframework.context.annotation.ComponentScan;
 
 
-@SpringBootApplication(
-    scanBasePackageClasses = {ChildShopService.class, JerseyConfig.class})
+@SpringBootApplication
+@ComponentScan("ua.lviv.iot")
 public class RestApplication extends SpringBootServletInitializer{
 
   public static void main(String[] args) {
