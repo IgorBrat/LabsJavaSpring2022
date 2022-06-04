@@ -1,5 +1,6 @@
 package ua.lviv.iot.java.labs.forth.controller;
 
+import java.util.HashMap;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -19,6 +20,8 @@ import ua.lviv.iot.java.labs.forth.models.Clothes;
 @Path("/")
 public class RestController {
 
+  HashMap<Integer, Clothes> clothesMap = new HashMap<>();
+  
   @Autowired
   private ChildShopService childShopService;
 
@@ -26,6 +29,14 @@ public class RestController {
   @Path("clothes")
   @Produces(MediaType.APPLICATION_JSON)
   public Response getAllClothes() {
+    for (Clothes item: childShopService.findAll()) {
+      clothesMap.put(item.getId(), item);
+    }
+    for(Integer id: clothesMap.keySet()) {
+      String key = id.toString();
+      String value = clothesMap.get(id).toString();
+      System.out.println(key + " " + value);
+    }
     return Response.ok(childShopService.findAll()).build();
   }
 
@@ -45,7 +56,7 @@ public class RestController {
   @Path("{id}")
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.TEXT_PLAIN)
-  public Response saveItem(Clothes item) {
+  public Response saveItem(@PathParam("id") Integer id, Clothes item) {
     childShopService.saveItem(item);
     return Response.status(Status.OK).entity("Saved object in db.").build();
   }
