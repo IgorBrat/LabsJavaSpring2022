@@ -42,3 +42,11 @@ Add class to write present models to CSV, add tests on that, check project for b
 
 Output all Ethernet-connectors from the text. E.g.: RJ11 4P4C, RJ45 8P8C
 Format of connector: "RJ<2 numbers> <number><letter><number><letter>"
+
+# Lab8 Task
+
+Make project using Jax-rs and Spring boot:
+- make REST service with CRUD-operations for one class from lab 2;
+- save objects in My-SQL database (with fields of superclass);
+- GET should use id;
+- GET without id returns all objects from database.

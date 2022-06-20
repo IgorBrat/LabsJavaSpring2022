@@ -10,7 +10,7 @@ public class Toy extends Good {
   private String material;
   private String creature;
 
-  public Toy(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id,
+  public Toy(String name, float priceInUAH, Gender forGender, boolean isDiscounted, Integer id,
       String origin, float weightInKg, String material, String creature) {
     super(name, priceInUAH, forGender, isDiscounted, id, origin);
     this.weightInKg = weightInKg;

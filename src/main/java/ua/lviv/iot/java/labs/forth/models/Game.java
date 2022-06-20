@@ -12,7 +12,7 @@ public class Game extends Good {
   private String aboutGame;
   private String publisher;
 
-  public Game(String name, float priceInUAH, Gender forGender, boolean isDiscounted, long id,
+  public Game(String name, float priceInUAH, Gender forGender, boolean isDiscounted, Integer id,
       String origin, int sinceAge, int minCountOfPlayers, int maxCountOfPlayers, String aboutGame,
       String publisher) {
     super(name, priceInUAH, forGender, isDiscounted, id, origin);
