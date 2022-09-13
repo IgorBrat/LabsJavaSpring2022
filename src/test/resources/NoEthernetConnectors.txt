@@ -1,5 +1,0 @@
-Some sample text. Look lie Lorem Ipsun.
-Actually it`s not.
-RJ11 4P47 - might look like connector, but that`s not correct.
-
-Your ethernet connector is in another castle. Good luck then.
