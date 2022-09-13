@@ -1,3 +1,4 @@
-[submodule "src/main/resources/static"]
+[submodule "site"]
 	path = src/main/resources/static
 	url = https://github.com/IgorBrat/Web_labs3-5
+	branch = lab5
