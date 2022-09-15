@@ -1,6 +1,5 @@
 package ua.lviv.iot.java.labs.forth.controller;
 
-import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,22 +18,13 @@ import ua.lviv.iot.java.labs.forth.models.Clothes;
 @RestController
 @RequestMapping("/clothes")
 public class DataController {
-
-  HashMap<Integer, Clothes> clothesMap = new HashMap<>();
   
   @Autowired
   private ChildShopService childShopService;
 
   @GetMapping
   public ResponseEntity<Iterable<Clothes>> getAllClothes() {
-    for (Clothes item: childShopService.findAll()) {
-      clothesMap.put(item.getId(), item);
-    }
-    for(Integer id: clothesMap.keySet()) {
-      String key = id.toString();
-      String value = clothesMap.get(id).toString();
-      System.out.println(key + " " + value);
-    }
+    System.out.println(childShopService.findAll());
     return new ResponseEntity<>(childShopService.findAll(), HttpStatus.OK);
   }
 
@@ -49,6 +39,7 @@ public class DataController {
 
   @PostMapping
   public ResponseEntity<String> saveItem(@RequestBody Clothes item) {
+    System.out.println(item);
     childShopService.saveItem(item);
     return new ResponseEntity<>(HttpStatus.CREATED);
   }
